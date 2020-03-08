@@ -17,15 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	// }, 5 * 1000);
 
 	const renderRegistr = () => {
-		Registr.forEach((order, i) => {
+		Registr.forEach((order) => {
 				console.log(order.email);
-			Login.forEach((orderL, j) => {
+			Login.forEach((orderL) => {
+				console.log(orderL.email);
 				if ((order.email == orderL.email || order.origName == orderL.emailOrOrigName) &&
 					order.password == orderL.password){
-						console.log('fuck me');
-					// setTimeout();
+					window.location.href = 'main.html';
 				} else {
-					console.log('!fuck me');
 				}
 			});
 		});
@@ -66,8 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	// btnRegistr.addEventListener("click", ()=>{
 	// 	alert("Спасибо за регистрцию, теперь нажмите кнопку Вход" );
 	// });
-	//запись данных с регистрции value
+	// запись данных с регистрции value
 	form.addEventListener("submit", (e) => {
+		console.log('hi');
 		e.preventDefault();
 		const inputsElement = {};
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	//запись данных с входа value
 	formLogin.addEventListener("submit", (e) => {
-
+		
 		e.preventDefault();
 		const inputsElement = {};
 
@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		formLogin.reset();
 		Login.push(inputsElement);
 	});
+
 	// console.log(Registr);
 	// console.log(Login);
 	btnOnFeed.addEventListener("click", () => {
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		// 	}
 		// }
 
-	renderRegistr();
+		renderRegistr();
 		// renderTest();
 
 	});
