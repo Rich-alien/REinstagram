@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style.css">
+	<title>REinstagram</title>
+</head>
+<body>
+	<section class="main">
+		<main class="main__registering">
+			<article class="container">
+				<div class="registering">
+					<div class="registering__doublephone">
+						<img src="/img/leftPhone.png" alt="phone ">
+					</div>
+					<div class="for-column">
+						<div class="form__container BlockRegistration">
+							<h1 class="form__logo">
+								REinstagram
+							</h1>
+							<form class="form " name="registration" method="POST" action="/js/form.js">
+								<!-- start form -->
+								<div class="form__eladres">
+									<input class="form__eladres__input input-style" type="email" name="email" required
+										placeholder="Эл.адрес" maxlength="28" value="richalien@yandex.ru">
+								</div>
+								<div class="form__name-orig">
+									<input class="form__name-orig__input input-style" type="text" name="origName" required
+										placeholder="Имя и фамилия" maxlength="28" value="richalien@yandex.ru">
+								</div>
+								<div class="form__name-nickname">
+									<input class="form__name-nickname__input input-style" type="text" name="nickname" required
+										placeholder="Имя пользователя" maxlength="28" value="richalien@yandex.ru">
+								</div>
+								<div class="form__password">
+									<input class="form__password__input input-style" type="password" name="password" required
+										placeholder="Пароль" maxlength="28" value="richalien@yandex.ru">
+								</div>
+								<button class="button btnClick" type="submit">Регистрация</button>
+							</form>
+						</div>
+						<!-- /registering__form -->
+
+						<div class="form__container Dblock">
+							<h1 class="form__logo">
+								REinstagram
+							</h1>
+							<form class="formLogin" method="POST" action="/js/form.js">
+								<!-- start form -->
+								<div class="form__eladres__login ">
+									<input class="form__eladres input-style" type="email" name="emailOrOrigName" required
+										placeholder="Email or nickname" maxlength="28" >
+								</div>
+								<div class="form__pass__login ">
+									<input class="form__pass input-style" type="password" name="password" required
+										placeholder="Password" maxlength="28" value="richalien@yandex.ru">
+								</div>
+							</form>
+							<button class="button  btnTest" type="submit">
+
+								Войти
+							</button>
+						</div>
+						<div class="form__container re-enter thelogin">
+							<p class="question">Есть аккаунт?</p>
+							<a class="enter" href="#"> Вход</a>
+						</div>
+
+						<div class="form__container thereg">
+							<p class="question">Нет аккаунта?</p>
+							<a class="regenter " href="#">Регистрация</a>
+						</div>
+						<div class="download-app">
+							<p class="download-app__text">
+								Установите приложение.
+							</p>
+							<div class="download-app__img">
+								<img src="/img/appStore.png" alt="" class="app-store">
+								<img src="/img/googleStore.png" alt="" class="google-store">
+							</div>
+						</div>
+					</div>
+					<!-- /for-column -->
+				</div>
+			</article>
+		</main>
+	</section>
+	<script src="/js/regisration.js"></script>
+</body>
+
+</html>
