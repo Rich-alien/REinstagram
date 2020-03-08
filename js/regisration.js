@@ -12,16 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		btnOnFeed = document.querySelector('.btnTest');
 	const Registr = [];
 	const	Login = [];
-	// setTimeout(function () {
-	// 	window.location.href = 'main.html';
-	// }, 5 * 1000);
+
 
 	const renderRegistr = () => {
 		Registr.forEach((order) => {
 				console.log(order.email);
 			Login.forEach((orderL) => {
-				console.log(orderL.email);
-				if ((order.email == orderL.email || order.origName == orderL.emailOrOrigName) &&
+				console.log(orderL.emailOrnickname);
+				if ((order.email == orderL.emailOrnickname || order.nickname == orderL.emailOrnickname) &&
 					order.password == orderL.password){
 					window.location.href = 'main.html';
 				} else {
@@ -30,21 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	};
 	let test = () =>{
-	
-	
+
 	};
 
-	// const renderTest = () => {
-	// 	for(let i; i<Registr.length;i++){
-	// 		for(let j; j<Login.length;i++){
-	// 			if ((i.email == j.email || i.origName == j.emailOrOrigName) &&
-	// 				i.password == j.password) {
-	// 				console.log('fuck me');
-	// 			} else {
-	// 				console.log('!fuck me');
-	// 			}
-	// 	}
-	// };
 
 	//добавление окна входа
 	btnEnter.addEventListener("click", () => {
@@ -62,15 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		theLogin.style.display = "flex";
 
 	});
-	// btnRegistr.addEventListener("click", ()=>{
-	// 	alert("Спасибо за регистрцию, теперь нажмите кнопку Вход" );
-	// });
+	btnRegistr.addEventListener("click", ()=>{
+		alert("Спасибо за регистрцию, теперь нажмите кнопку Вход" );
+	});
 	// запись данных с регистрции value
 	form.addEventListener("submit", (e) => {
 		console.log('hi');
 		e.preventDefault();
 		const inputsElement = {};
-
 		const elements = [...form.elements];
 		elements.forEach((elem) => {
 			inputsElement[elem.name] = elem.value;
@@ -89,23 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		elements.forEach((elem) => {
 			inputsElement[elem.name] = elem.value;
 		});
-		formLogin.reset();
+		// formLogin.reset();
 		Login.push(inputsElement);
 	});
 
-	// console.log(Registr);
-	// console.log(Login);
 	btnOnFeed.addEventListener("click", () => {
-		// for (const key in Registr) {
-		// 	if (Registr.hasOwnProperty(key)) {
-		// 		const element = Registr[key];
-		// 		Console.log(Registr[key]);
-		// 	}
-		// }
-
 		renderRegistr();
-		// renderTest();
-
 	});
-
 });
