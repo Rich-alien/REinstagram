@@ -399,6 +399,20 @@ body {
 }
 
 .slider-img {
-  width: 614px;
+  width: 100%;
+  /* width: 614px; */
+  /* display: flex;
+  justify-content: center; */
 }
+.icon__main{
+  display: flex;
+  justify-content: space-between;
+}
+.left__icon{
+padding: 15px;
+}
+.right__icon {
+  padding: 15px;
+}
+
 /*# sourceMappingURL=main.css.map */
